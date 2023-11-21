@@ -1,4 +1,17 @@
 *{box-sizing: border-box; margin: 0; padding: 0;}
+img{
+    width: 100%;
+    animation: rotatePic;
+    animation-duration: 2s;
+    cursor: pointer;
+}
+@keyframes rotatePic{
+    0%{transform: rotate(0deg);}
+    25%{transform: rotate(600deg);}
+    50%{transform: rotate(90deg);}
+    75%{transform: rotate(180deg);}
+    100%{transform: rotate(360deg);}
+}
 .container{
     height: 100vh;
     background-color: black;
@@ -8,7 +21,13 @@
 }
 .card{
     padding: 1rem;
+    background-image: radial-gradient(rgb(186, 30, 30), rgb(155, 82, 82));
+    box-shadow: 0 0 10px .5px #5d0404;
+    transition: scale 1.02;
 
+}
+.card:hover{
+    scale: 1.02;
 }
 .card p{
     text-align: justify;
@@ -32,4 +51,12 @@
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+}
+.card a:active{
+    box-shadow: 2px 2px 10px;
+}
+@media (max-width: 767px){
+    .container{
+        margin: 0;
+    }
 }
